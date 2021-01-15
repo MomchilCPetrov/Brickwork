@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Brickwork</title>
+	<script language="JavaScript" type="text/javascript" src="termlib.js"></script>
+	<script language="JavaScript" type="text/javascript" src="index.js"></script>
+<style type="text/css" src="term_styles.css">
+
+
+</style>
+</head>
+<body bgcolor="#222222" link="#77dd11" text="#cccccc" alink="#eeeeee" vlink="#77dd11"
+topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+
+<table border="0" cellspacing="20" cellpadding="0">
+	<tr valign="top">
+	<td nowrap>
+		<table border="0" cellspacing="0" cellpadding="0" width="190" class="inventory">
+		<tr><td nowrap></td></tr>
+		<tr><td nowrap>
+			<a href="javascript:termOpen()" onfocus="if(this.blur)this.blur();" onmouseover="window.status='open terminal'; return true" onmouseout="window.status=''; return true" class="termopen">&gt; open terminal &nbsp;</a>
+		</td></tr>
+		<tr><td nowrap>
+			<p><a href="javascript:insertAsTypedText()" onfocus="if(this.blur)this.blur();" class="termopen">&gt; insertText()&nbsp;</a></p>
+		</td></tr>
+		<tr><td nowrap class="lh15">
+			&nbsp;<br>
+			(c) mass:werk N. Landsteiner 2005-2007</a>
+		</td></tr>
+		</table>
+	</td>
+	<td class="lh15" id="mainPane">
+		<p><b style="letter-spacing: 1px;">Brickwork</p>
+	</td>
+	</tr>
+</table>
+
+<div id="termDiv" style="position:absolute; visibility: hidden; z-index:1;"></div>
+
+<div id="promptDiv" style="position:absolute; top: 60px; left: 340px; background-color: #ddd; border-color: #fff #888 #888 #fff; border-width: 1px; border-style: solid;z-index:2; visibility: hidden;">
+	<table border="0" cellspacing="8" cellpadding="2">
+	<tr>
+	<td style="font-family: arial,helvetica,sans-serif; font-size: 12px; color: #000;">Please enter a text to import:</td>
+	</tr>
+	<form id="promptForm">
+	<tr>
+	<td><textarea name="content" cols="40" rows="6""></textarea></td>
+	</tr>
+	<tr>
+	<td align="right">
+		<input type="button" value="Cancel" onclick="promptHandler(null, false); this.form.content.value='';">
+		<input type="button" value="Import" onclick="promptHandler(this.form.content.value); this.form.content.value='';">
+	</td>
+	</tr>
+	</form>
+	</table>
+</div>
+
+</body>
+</html>
